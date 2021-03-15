@@ -1,0 +1,74 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px solid rgb(36, 36, 36);
+}
+
+.mainTab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(22, 22, 22);
+}
+
+.mainTab button {
+    color: #ddd;
+    background-color: inherit;
+    border-top-color:  #ddd;
+    border-right-color: #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.mainTab button:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+.mainTab button.active {
+    background-color: rgb(228, 6, 6);
+    border: 2px solid #ccc;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.jsTabContent {
+    color: #ddd;
+    background-color: rgb(99, 99, 99);
+    min-height: 500px;
+}
+
+.jsTabContent h2, li{
+    margin-left: 20px;
+}
+
+.storySelector{
+    align-items: center;
+}
+
+.storySelector button{
+    background-color: rgb(240, 212, 178);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+    padding: 50px 20px;
+    cursor: pointer;
+}
+
+.storySelector button:hover{
+    box-shadow: 0 4px 6px rgba(57, 57, 117, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: rgb(245, 232, 217);
+}
+
+.storySelector button:active{
+    transform: scale(0.9);
+}
