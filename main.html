@@ -8,21 +8,34 @@
     <title>SW_Edu_Tmax</title>
   </head>
   <body>
-    <div class="mainTab">
-        <button class="jsTabLinks" onclick="openTab(event,'sw_edu')" id="defaultOpen">SW_EDU</button>
+    <div class="jsMainTab">
+        <button class="jsTabLinks active" onclick="openTab(event,'sw_edu')" id="defaultOpen">SW_EDU</button>
         <button class="jsTabLinks" onclick="openTab(event,'math_edu')">MATH_EDU</button>
     </div>
     <div id="sw_edu" class="jsTabContent">
-        <h2>SW_Education</h2>
-        <li>함께 이야기 탐험을 해 볼까요</li>
-        <div class="storySelector">
-            <button>룡룡이의 장난감 공장</button>
-            <button>거대 젤리신의 젤리 나라 건설기</button>
-            <button>마당을 나온 맥스 여행기</button>
+        <div class="jsStorySelectPage">
+            <h2>SW Education</h2>
+            <li>함께 이야기 탐험을 해 볼까요</li>
+            <div class="jsStorySelector">
+                <button class="storiesLinks" onclick="openStory(event,'story_factory')">룡룡이의 장난감 공장</button>
+                <button class="storiesLinks" onclick="openStory(event,'story_jelly')">거대 젤리신의 젤리 나라 건설기</button>
+                <button class="storiesLinks" onclick="openStory(event,'story_max')">마당을 나온 맥스 여행기</button>
+            </div>
+        </div>
+        <div class ="jsStoriesPage">
+            <div class="jsStories" id="story_factory">
+                <h2>LyongLyong</h2>
+            </div>
+            <div class="jsStories" id="story_jelly">
+                Jelly
+            </div>
+            <div class="jsStories" id="story_max">
+                Max
+            </div>
         </div>
     </div>
     <div id="math_edu" class="jsTabContent">
-        <h2>Mathematics_Education</h2>
+        <h2>Mathematics Education</h2>
         <p>test page</p>
     </div>
     <script src="main.js"></script>
