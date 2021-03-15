@@ -17,21 +17,42 @@
             <h2>SW Education</h2>
             <li>함께 이야기 탐험을 해 볼까요</li>
             <div class="jsStorySelector">
-                <button class="storiesLinks" onclick="openStory(event,'story_factory')">룡룡이의 장난감 공장</button>
-                <button class="storiesLinks" onclick="openStory(event,'story_jelly')">거대 젤리신의 젤리 나라 건설기</button>
-                <button class="storiesLinks" onclick="openStory(event,'story_max')">마당을 나온 맥스 여행기</button>
+                <button class="storiesLinks" onclick="openStory(event, this.innerText)">룡룡이의 장난감 공장</button>
+                <button class="storiesLinks" onclick="openStory(event, this.innerText)">거대 젤리신의 젤리 나라 건설기</button>
+                <button class="storiesLinks" onclick="openStory(event, this.innerText)">마당을 나온 맥스 여행기</button>
             </div>
         </div>
         <div class ="jsStoriesPage">
-            <div class="jsStories" id="story_factory">
-                <h2>LyongLyong</h2>
+            <div class="boxes-outline-top"></div>
+            <div class="boxes-inner">
+                <div class="box-story-head"></div>
+                <div class = "box-story-body">
+                    <div class="storySection">
+                        <h3>Title</h3>
+                        <br><br>&nbsp&nbsp
+                        <p>Blah Blah~~</p>
+                    </div>
+                    <div class="storyControl">
+                        <button><-1-></button>
+                        <button><-2-></button>
+                        <button><-3-></button>
+                    </div>
+                </div>
+                <div class="box-editor-head"></div>
+                <div class = "box-editor-body">
+                    <div class="editorSection">
+                        Call Theia Editor Extension
+                    </div>
+                </div>
+                <div class="box-display-head"></div>
+                <div class = "box-display-body">
+                    <div class="displaySection">
+                        Call Theia Voxel.js Extension
+                    </div>
+                </div>
+                <div class="box-display-tail"></div>
             </div>
-            <div class="jsStories" id="story_jelly">
-                Jelly
-            </div>
-            <div class="jsStories" id="story_max">
-                Max
-            </div>
+            <div class="boxes-outline-bottom"></div>
         </div>
     </div>
     <div id="math_edu" class="jsTabContent">

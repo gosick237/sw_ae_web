@@ -41,6 +41,8 @@ body {
     color: rgb(0, 0, 0);
     background-color: rgb(155, 153, 153);
     min-height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .jsStorySelectPage {
@@ -85,7 +87,92 @@ body {
     transform: scale(0.9);
 }
 
+.jsStoriesPage{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    color: rgb(0, 0, 0);
+    background-color: #575c6ec5;
+    min-height: 500px;
+}
 
-.jsStoriesPage {
-    margin-left: 20px;
+.boxes-outline-top,
+.boxes-outline-bottom {
+    position: relative;
+    z-index: 2;
+    height: 5px;
+    border-left: 1px solid rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(0,0,0,0.4);
+    background: #333642;
+}
+
+.boxes-inner {
+    display: flex;
+    min-height: 500px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.box-story-head,
+.box-editor-head,
+.box-display-head,
+.box-display-tail {
+    position: relative;
+    z-index: 2;
+    width: 5px;
+    border-left: 1px solid rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(0,0,0,0.4);
+    background: #333642;
+}
+
+.box-story-body,
+.box-editor-body,
+.box-display-body{
+    min-height: 500px;
+    height: 100%;
+    width: 32.69%;
+}
+
+.box-story-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.storySection {
+    padding: 5px 5px;
+    border: 1px solid red;
+    height: 90%;
+    height: 450px;/*setting*/
+    max-height: 520px;
+}
+
+.storyControl {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    width: 100%;
+    bottom: 0;
+}
+
+.storyControl button {
+    height: 100%;
+    width: 31.69%;
+    align-self:baseline;
+}
+
+.editorSection {
+    padding: 5px 5px;
+    height: 100%;
+    border: 1px solid red;
+    height: 550px;/*setting*/
+    max-height: 550px;
+}
+
+.displaySection {
+    padding: 5px 5px;
+    height: 100%;
+    border: 1px solid red;
+    height: 550px;
+    max-height: 550px;/*setting*/
 }

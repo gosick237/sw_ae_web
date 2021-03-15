@@ -5,24 +5,24 @@ const storySelectionPage = document.getElementsByClassName("jsStorySelectPage");
 const storyPage = document.getElementsByClassName("jsStoriesPage");
 const stories = document.getElementsByClassName("jsStories");
 
+const storyWindow = document.getElementsByClassName("storySection");
+
 function openStory(e, storyName) {
   console.log(storyName);
   //turn select page off
   storySelectionPage[0].style.display = "none";
+  //turn story page on
   storyPage[0].style.display = "block";
+  //get story section DOM's chile nodes
+  st = storyWindow[0].children;
 
-  //turn stories off
-  for (i = 0; i < stories.length; i++) {
-    stories[i].style.display = "none";
+  //put title (put context later)
+  for (i = 0; i < st.length; i++) {
+    if (st[i].tagName === "H3") {
+      st[i].innerText = storyName;
+      break;
+    }
   }
-  /*
-  //set all stories non active
-  for (i = 0; i < stories.length; i++) {
-    stories[i].className = stories[i].className.replace(" active", "");
-  }
-  */
-  //turn on target story on
-  document.getElementById(storyName).style.display = "block";
   //for (i = 0; i < stories.length; i++) {
   //  console.log(stories[i].style.display);
   //}
