@@ -1,0 +1,8 @@
+jellyData = `[
+    {
+        "name": "거대 젤리신의 젤리 나라 건설기",
+        "text": "젤리나라를 건설하기로 마음먹은 거대 젤리신이 일꾼 젤리들을 만들어서 효율적으로 젤리를 만들기로 했다.<br> 비슷한 일을 하는 일꾼 젤리는 만들때 똑같이 만들어야 덜 힘들지 않을까?<br> 포장 담당 젤리는 박스를 이용해서 포장하고<br> 반죽 담당 젤리는 딸기향을 넣어서 반죽하고<br> 모양 담당 젤리는 곰모양으로 젤리를 모양내도록 해야지<br> 젤리신의 말에 맞도록 각 젤리의 설계도를 만들어보자",
+        "code": "class packagingJelly {<br>&nbsp&nbsp[      ]<br><br>&nbsp&nbsp[      ]<br>}",
+        "resultURL": "https://gosick237.github.io/sw_ae_web/jelly"
+    }
+]`;
