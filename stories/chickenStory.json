@@ -1,0 +1,8 @@
+chickenData = `[
+    {
+        "name": "마당을 나온 맥스 여행기",
+        "text": "먹힐 날만 기다리던 맥스가 마당을 탈출하려고 합니다. 담을 뛰어 넘기위한 점프각도를 계산해봅시다",
+        "code": "function angleCalculator(){<br>  <br>}",
+        "resultURL": "https://gosick237.github.io/sw_ae_web/chicken"
+    }
+]`;

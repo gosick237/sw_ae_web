@@ -6,26 +6,45 @@ const storyPage = document.getElementsByClassName("jsStoriesPage");
 const stories = document.getElementsByClassName("jsStories");
 
 const storyWindow = document.getElementsByClassName("storySection");
+const editorWindow = document.getElementsByClassName("editorSection");
 
 function openStory(e, storyName) {
   console.log(storyName);
+
+  let data = null;
+  storyName === "jelly"
+    ? (data = jellyData)
+    : storyName === "dragon"
+    ? (data = dragonData)
+    : (data = chickenData);
+  //open story data(JSON)
+  const storyJson = JSON.parse(data)[0];
+  const title = storyJson.name;
+  const content = storyJson.text;
+  const code = storyJson.code;
   //turn select page off
   storySelectionPage[0].style.display = "none";
   //turn story page on
-  storyPage[0].style.display = "block";
-  //get story section DOM's chile nodes
+  storyPage[0].style.display = "flex";
+  storyPage[0].style.flexDirection = "column";
+  //get story/editor section DOM's chile nodes
   st = storyWindow[0].children;
-
-  //put title (put context later)
+  //put title (put context later) when have concrete part more than one; h1,p,div etc
   for (i = 0; i < st.length; i++) {
+    console.log(st[i].tagName);
     if (st[i].tagName === "H3") {
-      st[i].innerText = storyName;
-      break;
+      st[i].innerText = title;
+    } else if (st[i].tagName === "P") {
+      st[i].innerHTML = content;
     }
   }
-  //for (i = 0; i < stories.length; i++) {
-  //  console.log(stories[i].style.display);
-  //}
+  editorWindow[0].innerHTML = code;
+  /*
+  //put story
+  for (i = 0; i < stories.length; i++) {
+    console.log(stories[i].style.display);
+  }
+  */
 }
 
 function openTab(e, tabName) {
