@@ -2,7 +2,7 @@ dragonData = `[
     {
         "name": "룡룡이의 장난감 공장",
         "text": "장난감을 반복적으로 찍어내려고 한다. 장난감 별로 틀을 만들어보자",
-        "code": "function toyFactor(name){<br><br><br><br>}",
+        "code": "function toyFactory(name){<br><br><br><br>}",
         "resultURL": "https://gosick237.github.io/sw_ae_web/toy"
     }
 ]`;

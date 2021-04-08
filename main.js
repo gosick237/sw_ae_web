@@ -8,6 +8,24 @@ const stories = document.getElementsByClassName("jsStories");
 const storyWindow = document.getElementsByClassName("storySection");
 const editorWindow = document.getElementsByClassName("editorSection");
 
+const left = document.getElementById("dragLeft");
+const right = document.getElementById("dragRight");
+const bar = document.getElementById("dragBar");
+
+const drag = (e) => {
+  document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
+  left.style.width = e.pageX - bar.offsetWidth / 2 - 10 + "px";
+  console.log(e.pageX);
+  console.log(bar.offsetWidth);
+};
+
+bar.addEventListener("mousedown", () => {
+  document.addEventListener("mousemove", drag);
+});
+bar.addEventListener("mouseup", () => {
+  document.removeEventListener("mousemove", drag);
+});
+
 function openStory(e, storyName) {
   console.log(storyName);
 
@@ -21,7 +39,6 @@ function openStory(e, storyName) {
   const storyJson = JSON.parse(data)[0];
   const title = storyJson.name;
   const content = storyJson.text;
-  const code = storyJson.code;
   //turn select page off
   storySelectionPage[0].style.display = "none";
   //turn story page on
@@ -38,13 +55,6 @@ function openStory(e, storyName) {
       st[i].innerHTML = content;
     }
   }
-  editorWindow[0].innerHTML = code;
-  /*
-  //put story
-  for (i = 0; i < stories.length; i++) {
-    console.log(stories[i].style.display);
-  }
-  */
 }
 
 function openTab(e, tabName) {

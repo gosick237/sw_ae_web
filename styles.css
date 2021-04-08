@@ -59,7 +59,7 @@ body {
   margin: 0px 0px;
   color: rgb(228, 227, 227);
   background-color: rgb(50, 50, 50);
-  min-height: 500px;
+  min-height: 800px;
 }
 
 .jsStorySelectPage h2,
@@ -68,16 +68,21 @@ li {
   font-weight: bold;
 }
 
+.jsStorySelector {
+  min-height: 600px;
+  display: flex;
+}
+
 .jsStorySelector button {
   color: rgb(0, 0, 0);
   background-color: rgb(199, 199, 199);
   font-size: 20px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 50px;
   margin-left: 50px;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   padding: 50px 20px;
   cursor: pointer;
 }
@@ -111,9 +116,9 @@ li {
 
 .jsStoriesPage {
   display: none;
-  margin: 10px 20px;
+  margin: 5px 5px;
   color: white;
-  background-color: rgb(187, 224, 227));
+  background-color: inherit;
   min-height: 500px;
 }
 
@@ -129,14 +134,13 @@ li {
 
 .boxes-inner {
   display: flex;
-  min-height: 500px;
+  min-height: 800px;
   flex-direction: row;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .box-story-head,
-.box-editor-head,
-.box-display-head,
 .box-display-tail {
   position: relative;
   z-index: 2;
@@ -146,15 +150,10 @@ li {
   background: #3d404e;
 }
 
-.box-story-body,
-.box-editor-body,
-.box-display-body {
-  min-height: 500px;
-  height: 100%;
-  width: 32.8%;
-}
-
 .box-story-body {
+  min-height: 800px;
+  height: 100%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -162,10 +161,33 @@ li {
   color: black;
 }
 
+#dragBar {
+  width: 10px;
+  z-index: 2;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: col-resize;
+  background: #3d404e;
+}
+
+#dragRight {
+  flex: 1 1 auto;
+}
+
+.box-display-body {
+  margin: -2px -2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-theia-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .storySection {
   padding: 20px 20px;
-  min-height: 500px; /*setting*/
-  max-height: 520px;
+  min-height: 700px; /*setting*/
 }
 
 .storyControl {
@@ -181,18 +203,4 @@ li {
   height: 100%;
   width: 32.7%;
   align-self: baseline;
-}
-
-.editorSection {
-  padding: 20px 20px;
-  height: 100%;
-  height: 550px; /*setting*/
-  max-height: 550px;
-}
-
-.displaySection {
-  padding: 0px 0px;
-  height: 100%;
-  height: 550px;
-  max-height: 550px; /*setting*/
 }

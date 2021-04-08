@@ -24,31 +24,23 @@
         </div>
         <div class ="jsStoriesPage">
             <div class="boxes-outline-top"></div>
-            <div class="boxes-inner">
+            <div class="boxes-inner" id="dragWrapper">
                 <div class="box-story-head"></div>
-                <div class = "box-story-body">
+                <div class = "box-story-body" id="dragLeft">
                     <div class="storySection">
                         <h3>Title</h3>
                         <br><br>&nbsp&nbsp
                         <p>Blah Blah~~</p>
                     </div>
                     <div class="storyControl">
-                        <button><-1-></button>
-                        <button><-2-></button>
-                        <button><-3-></button>
+                        <button ><-1-></button>
+                        <button ><-2-></button>
+                        <button ><-3-></button>
                     </div>
                 </div>
-                <div class="box-editor-head"></div>
-                <div class = "box-editor-body">
-                    <div class="editorSection">
-                        Call Theia Editor Extension
-                    </div>
-                </div>
-                <div class="box-display-head"></div>
-                <div class = "box-display-body">
-                    <div class="displaySection">
-                        Call Theia Voxel.js Extension
-                    </div>
+                <div class="box-display-head" id="dragBar"></div>
+                <div class="box-display-body" id="dragRight">
+                    <iframe class="box-theia-body" src="//192.168.153.243:3000/#/home/theia"></iframe>
                 </div>
                 <div class="box-display-tail"></div>
             </div>
